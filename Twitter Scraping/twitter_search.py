@@ -45,7 +45,7 @@ def persistUserInfo(user):
         #Chaecking for existing entries
         sql = "SELECT COUNT(*) FROM twitter_user_search WHERE twitter_user_id = %s"
         val = (profileId, )
-        myCursor.execute(sql,val)
+        
         row = myCursor.fetchall()
         if (row[0][0] == 0):
             #Database insertion
